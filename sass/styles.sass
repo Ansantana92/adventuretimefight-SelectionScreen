@@ -5,18 +5,18 @@
     box-sizing: border-box
     font-size: 14px
 body
-    background-image: url('../images/landofooo.gif')
+    background-image: url('../images/mundodeooo-background.jpg')
     background-size: cover
     background-repeat: no-repeat
 .container
-    width: 100%
+    width: 100vw
     height: 100vh
     display: flex
     flex-direction: column
     align-items: center
     justify-content: space-around
 .logo img
-    width: 20vw
+    width: 22vw
 .players
     display: flex
     width: 100%
@@ -32,7 +32,6 @@ body
     transform: rotateY(180deg)
     z-index: 2
 .playerTwo
-    // background-color: blue
     max-width: 20vw
     min-width: 20vw
     height: 40vh
@@ -42,10 +41,10 @@ body
     flex-wrap: wrap
     justify-content: space-around
     align-content: space-around
-    width: 30%
-    height: 25%
+    max-width: 25%
+    height: 20%
 .characters img
-    width: 80px
+    max-width: 70px
     border: 3px solid black
 .selected:hover
     border: 3px solid red
@@ -57,39 +56,23 @@ body
     width: 100%
     height: 100%
     text-align: center
-// .texto1
-//     position: fixed
-//     left: 10px
-//     background-image: url('../images/raio.gif')
-//     width: 38%
-//     height: 40%
-//     z-index: 0
-// .texto2
-//     position: fixed
-//     right: 10px
-//     background-image: url('../images/raio.gif')
-//     width: 38%
-//     height: 40%
-//     z-index: 0
 #char-name
     background-color: black
     font-family: 'Press Start 2P', cursive
     font-size: 2rem
     color: white
     text-align: center
-    max-width: 28vw
-    min-width: 28vw
+    min-width: 32vw
 #char-name2
     background-color: black
     font-family: 'Press Start 2P', cursive
     font-size: 2rem
     color: white
     text-align: center
-    max-width: 28vw
-    min-width: 28vw
+    min-width: 32vw
 button
     position: fixed
-    right: 50px
+    right: 400px
     bottom: 50px
     padding: 0.8rem 1.6rem
     color: white
@@ -98,3 +81,44 @@ button
 button:hover
     background-color: white
     color: black
+.column1
+    z-index: -3
+    position: fixed
+    left: 2%
+    background-color: red
+    height: 100vh
+    width: 350px
+.column1 img
+    max-width: 350px
+    border: solid 10px #00ccff
+    animation: blink 2s infinite
+.column2 img
+    max-width: 350px
+    border: solid 10px #00ccff
+    animation: blink 2s infinite
+.column2
+    z-index: -3
+    position: fixed
+    right: 2%
+    background-color: blue
+    height: 100vh
+    width: 350px
+.playerOne img
+    animation: moveImg 1s linear infinite
+.playerTwo img
+    animation: moveImg 1s linear infinite
+
+@keyframes moveImg
+    0%
+        transform: translateY(0)
+    50%
+        transform: translateY(5px)
+    100%
+        transform: translateY(0)
+@keyframes blink 
+    0%   
+        border-color: #00ccff 
+    50% 
+        border-color: #d400d4
+    100% 
+        border-color: #00ccff
